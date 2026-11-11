@@ -11,7 +11,7 @@ port = 443
 try:
     with socket.create_connection((host, port), timeout=5):
         print("接続成功:", host)
-                status = "SUCCESS"
+        status = "SUCCESS"
 except OSError:
     print("接続失敗:", host)
 
