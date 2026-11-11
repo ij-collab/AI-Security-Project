@@ -14,6 +14,7 @@ try:
         status = "SUCCESS"
 except OSError:
     print("接続失敗:", host)
+    status = "FAILED"
 
 with open("security.log", "a", encoding="utf-8") as f:
     f.write(f"{datetime.datetime.now()} - {host} -接続確認完了\n")
