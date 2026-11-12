@@ -26,11 +26,3 @@ if status == "FAILED":
     
      print("警告：接続異常を検知しました")
 
-start = time.time()
-
-try:
-    socket.create_connection(("github.com",443), timeout=5).close()
-    print("接続時間:", round(time.time() - start, 2), "秒")
-except OSError:
-    print("接続時間の測定に失敗")
-
