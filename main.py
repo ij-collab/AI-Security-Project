@@ -8,9 +8,13 @@ import socket
 host = "github.com"
 port = 443
 
+start = time.time()
+
 try:
     with socket.create_connection((host, port), timeout=5):
+        elapsed = round(time.time() - start,2)
         print("接続成功:", host)
+        print("接続時間:", elapsed, "秒")
         status = "SUCCESS"
 except OSError:
     print("接続失敗:", host)
