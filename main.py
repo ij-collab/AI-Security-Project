@@ -18,6 +18,7 @@ try:
         status = "SUCCESS"
     if elapsed > 1:
         print("警告:接続速度が低下しています")
+        status = "SLOW"
         status = "SUCCESS"
 except OSError:
     print("接続失敗:", host)
